@@ -1,0 +1,74 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+*{
+    font-family: sans-serif;
+}
+
+h1{
+    margin-top: 100px;
+    text-align: center;
+}
+
+body{
+    color: white;
+    background-color: #1c1c1c;
+}
+
+form{
+    max-width: 500px;
+    margin:auto;
+    padding: 0px 30px;
+}
+
+fieldset{
+    border: none;
+    border-radius: 15px;
+    background-color: rgb(40, 40, 105);
+    padding: 30px;
+
+    text-align: center;
+}
+
+label{
+    font-weight:600;
+}
+
+input{
+    padding: 6px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+}
+
+.radio{
+    cursor: pointer;
+}
+
+button{
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    width: 130px;
+
+    transition: background 0.15s;
+}
+
+button:hover{
+    background-color: rgb(154, 154, 255);
+    cursor: pointer;
+}
+
+#divMontante{
+    max-width: 500px;
+    margin: auto;
+    margin-top: 50px;
+
+    text-align: center;
+
+    border-radius: 15px;
+    border: 2px solid rgb(226, 226, 226);
+}

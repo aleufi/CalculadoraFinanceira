@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculadora de Investimento</title>
+        
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+
+    <body>
+
+        <h1>Calcular Montante</h1>
+
+        <form action="">
+
+            <fieldset>
+
+                <label>Aporte inicial</label> <br>
+                <input type="number" id="dado1" value="" placeholder="0,00">
+
+                <br>
+                <br>
+
+                <label>Taxa de Juros (%)</label> <br>
+
+                <input type="radio" name="tempo2" id="meses2" class="radio">
+                <label>Ao mês</label>
+                <input type="radio" name="tempo2" id="anos2" class="radio">
+                <label>Ao ano</label> <br>
+
+                <input type="number" id="dado2" value="" step=".01">
+
+                <br>
+                <br>
+
+                <label>Investimento mensal</label> <br>
+                <input type="number" id="dado3">
+
+                <br>
+                <br>
+
+
+                <label>Tempo</label> <br>
+
+                <input type="radio" name="tempo" id="meses" class="radio">
+                <label>Meses</label>
+                <input type="radio" name="tempo" id="anos" class="radio">
+                <label>Anos</label>
+
+                <br>
+
+                <input type="number" id="dado4" value="">
+
+                <br>
+                <br>
+
+                <button type="button" onclick="enviar()">Calcular</button>
+
+            </fieldset>
+
+            
+        </form>
+        
+        <div id="divMontante">
+
+            <h2>Montante final:</h2>
+
+            <p>O valor do montante final será de: <h3 id="montanteFinalText">0</h3></p>
+
+        </div>
+        
+        <script src="script.js"></script>
+
+
+    </body>
+
+
+
+</html>
