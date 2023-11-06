@@ -2,9 +2,6 @@
 divMontante = document.getElementById("divMontante");
 montanteText = document.getElementById("montanteFinalText");
 
-
-
-
 function enviar(){
     capital = document.getElementById("dado1").valueAsNumber;
     taxaJuros = document.getElementById("dado2").valueAsNumber;
@@ -25,8 +22,9 @@ function enviar(){
         montante = invMensal * (((1 + taxaJuros2) ** (tempo * 12) - 1) / (taxaJuros2)) + capital * (1 + taxaJuros2) ** (tempo * 12);
     }
 
+    
+
     montanteText.textContent = "R$" + montante.toLocaleString("pt-BR", {minimumFractionDigits: 2, maximumFractionDigits: 2});
 
 }
-
 

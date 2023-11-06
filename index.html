@@ -15,67 +15,76 @@
 
         <h1>Calcular Montante</h1>
 
-        <form action="">
+        <div id="tabela">
+            <form action="">
 
-            <fieldset>
+                <fieldset>
 
-                <label>Aporte inicial</label> <br>
-                <input type="number" id="dado1" value="" placeholder="0,00">
+                    <label>Aporte inicial</label> <br>
+                    <div id="textoBox"> <p>R$</p> <input type="number" id="dado1" value="" placeholder="0,00"> </div>
+                    
+                    <br>
+                    <br>
 
-                <br>
-                <br>
+                    <label>Taxa de Juros (%)</label> <br>
 
-                <label>Taxa de Juros (%)</label> <br>
+                    <input type="radio" name="tempo2" id="meses2" class="radio">
+                    <label>Ao mês</label>
+                    <input type="radio" name="tempo2" id="anos2" class="radio">
+                    <label>Ao ano</label> <br>
 
-                <input type="radio" name="tempo2" id="meses2" class="radio">
-                <label>Ao mês</label>
-                <input type="radio" name="tempo2" id="anos2" class="radio">
-                <label>Ao ano</label> <br>
+                    <div id="textoBox"> <p>%</p> <input type="number" id="dado2" value="" step=".01" placeholder="0,00"> </div>
 
-                <input type="number" id="dado2" value="" step=".01">
+                    <br>
+                    <br>
 
-                <br>
-                <br>
+                </fieldset>
 
-                <label>Investimento mensal</label> <br>
-                <input type="number" id="dado3">
+                <fieldset>
+                    <label>Investimento mensal</label> <br>
+                    <div id="textoBox"> <p>R$</p> <input type="number" id="dado3" placeholder="0,00"> </div>
 
-                <br>
-                <br>
+                    <br>
+                    <br>
 
 
-                <label>Tempo</label> <br>
+                    <label>Tempo</label> <br>
 
-                <input type="radio" name="tempo" id="meses" class="radio">
-                <label>Meses</label>
-                <input type="radio" name="tempo" id="anos" class="radio">
-                <label>Anos</label>
+                    <input type="radio" name="tempo" id="meses" class="radio">
+                    <label>Meses</label>
+                    <input type="radio" name="tempo" id="anos" class="radio">
+                    <label>Anos</label>
 
-                <br>
+                    <br>
 
-                <input type="number" id="dado4" value="">
+                    <div id="textoBox"> <p></p> <ion-icon name="calendar"></ion-icon> <input type="number" id="dado4" value="" placeholder="0"></div>
 
-                <br>
-                <br>
+                    <br>
+                    <br>
+                </fieldset>
+                    
+            </form>
 
-                <button type="button" onclick="enviar()">Calcular</button>
-
-            </fieldset>
-
+            <div id="botao">
+                <button type="button" onclick="enviar()"><ion-icon name="calculator"></ion-icon></button>
+            </div>
             
-        </form>
+        </div>
+
+
         
         <div id="divMontante">
 
             <h2>Montante final:</h2>
 
-            <p>O valor do montante final será de: <h3 id="montanteFinalText">0</h3></p>
+            <p>O valor do montante final será de: <h3 id="montanteFinalText">R$0,00</h3></p>
 
         </div>
         
         <script src="script.js"></script>
-
-
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        
     </body>
 
 
