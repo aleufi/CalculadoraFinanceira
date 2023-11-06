@@ -132,8 +132,8 @@ button{
 }
 
 button:hover{
-    border: 1px solid green;
-    background-color: green;
+    border: 1px solid rgb(38, 160, 218);
+    background-color: rgb(38, 160, 218);
     cursor: pointer;
 }
 

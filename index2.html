@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calcular Tempo</title>
+
+        <link rel="stylesheet" href="style2.css">
+
+    </head>
+
+    <body>
+        
+        <h1>Calcular Tempo de Investimento</h1>
+
+        <div id="tabelaTempo">
+
+            <form action="">
+
+                <fieldset>
+
+                    <label for="">Valor Presente</label>
+                    <div id="textoBox"> <p>R$</p> <input type="number" placeholder="0,00" id="valorPresente" value=""> </div>
+
+                </fieldset>
+
+                <fieldset>
+
+                    <label for="">Valor Futuro Desejado</label>
+                    <div id="textoBox"> <p>R$</p> <input type="number" placeholder="0,00" id="valorFuturo" value=""> </div>
+
+                </fieldset>
+
+                <fieldset>
+
+                    <label for="">Taxa de Juros</label> <br>
+                    
+                    <div id="textoBox"> <p>%</p> <input type="number" placeholder="0" id="taxaJuros" value=""> </div>
+                    
+                    <input type="radio" name="tempo" id="inputMes" class="radio"> <label for="">Ao mês</label>
+                    <input type="radio" name="tempo" id="inputAno" class="radio"> <label>Ao ano</label>
+                    
+                </fieldset>
+
+            </form>
+
+            <div id="botao">
+                <button onclick="tempo()"><ion-icon name="calculator"></ion-icon></button>
+            </div>
+
+        </div>
+
+
+        <div id="valorFuturoDiv"> 
+            <p>Tempo necessário para atingir <b id="tempoText">R$0,00</b> com uma taxa de juros anual de <b id="taxaText">0%</b>:</p>
+            <h3 id="valorFuturoText">0</h3> 
+        </div>
+
+        <script src="script2.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        
+
+    </body>
+
+
+</html>
