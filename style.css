@@ -35,6 +35,14 @@ a{
     transition: background 0.2s, border 0.2s;
 }
 
+@media (max-width: 800px){
+    ul{
+        gap: 20px;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
 a:hover{
     background-color: rgb(38, 160, 218);
     border: 2px solid rgb(38, 160, 218);
