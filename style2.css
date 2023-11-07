@@ -18,6 +18,54 @@ h1{
 /* --------------------------------------------------- */
 
 
+nav{
+    border-bottom: 3px solid #242424;
+ }
+ 
+ ul{
+     list-style: none;
+     display: flex;
+     flex-direction: row;
+     gap: 20px;
+     justify-content: center;
+ }
+ 
+ li{
+     padding: 10px;
+     margin-bottom: 10px;
+ }
+ 
+ a{
+     text-decoration: none;
+     color: white;
+     border: 2px solid white;
+     border-radius: 6px;
+     padding: 10px;
+ 
+     transition: background 0.2s, border 0.2s;
+ }
+ 
+ a:hover{
+     background-color: rgb(38, 160, 218);
+     border: 2px solid rgb(38, 160, 218);
+ }
+ 
+ #botaoAtivo{
+     background-color: rgb(38, 160, 218);
+     border: 2px solid rgb(38, 160, 218);
+ 
+     transition: background 0.2s, border 0.2s;
+ }
+ 
+ #botaoAtivo:hover{
+     background-color: rgb(23, 106, 145);
+     border: 2px solid rgb(23, 106, 145);
+ }
+
+
+/* --------------------------------------------------- */
+
+
 #tabelaTempo{
     height: fit-content;
     width: fit-content;
