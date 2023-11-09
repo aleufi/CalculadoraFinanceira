@@ -47,8 +47,8 @@ a{
 }
  
 a:hover{
-    background-color: rgb(38, 160, 218);
-    border: 2px solid rgb(38, 160, 218);
+     background-color: rgb(38, 160, 218);
+     border: 2px solid rgb(38, 160, 218);
 }
  
 #botaoAtivo{
@@ -73,8 +73,7 @@ a:hover{
 
 /* --------------------------------------------------- */
 
-
-#tabelaTempo{
+#tabelaTaxa{
     height: fit-content;
     width: fit-content;
     margin:auto;
@@ -100,7 +99,6 @@ fieldset{
 }
 
 /* --------------------------------------------------- */
-
 
 label{
     font-weight:600;
@@ -166,8 +164,7 @@ button:hover{
 
 /* --------------------------------------------------- */
 
-
-#textoBox{
+.textoBox{
     display: flex;
     flex-direction: row;
     color: rgb(82, 82, 82);
@@ -180,11 +177,11 @@ button:hover{
     justify-content: center;
 }
 
-#textoBox *{
+.textoBox *{
     padding: 5px;
 }
 
-#textoBox p{
+.textoBox p{
     line-height: 0%;
     margin: none;
     padding: none;
@@ -201,7 +198,7 @@ button:hover{
 
 /* --------------------------------------------------- */
 
-#valorFuturoDiv{
+#taxaFuturaDiv{
     max-width: 700px;
     margin: auto;
     margin-top: 50px;

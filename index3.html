@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Taxa Necessária</title>
+
+        <link rel="stylesheet" href="style3.css">
+
+        <script src="code.jquery.com_jquery-3.7.1.min.js"></script>
+
+    </head>
+
+
+    <nav>
+        <ul>
+            <li><a href="index.html" >Calcular Montante</a></li>
+            <li><a href="index2.html">Calcular Tempo de Investimento</a></li>
+            <li><a href="index3.html" id="botaoAtivo">Taxa Necessária</a></li>
+        </ul>
+    </nav>
+
+
+    <body>
+        
+        <h1>Taxa Necessária</h1>
+        
+        <div id="tabelaTaxa">
+
+            <form action="">
+
+                <fieldset>
+
+                    <label for="">Valor Presente</label> <br>
+                    <div class="textoBox"> <p>R$</p> <input type="number" placeholder="0,00" id="valorPresente" value=""> </div>
+                    
+                </fieldset>
+
+                <fieldset>
+
+                    <label for="">Valor Futuro Desejado</label> <br>
+                    <div class="textoBox"> <p>R$</p> <input type="number" placeholder="0,00" id="valorFuturo" value=""> </div>
+
+                </fieldset>
+                
+                <fieldset>
+
+                    <label for="">Tempo</label> <br>
+                    <div class="textoBox"> <p></p> <ion-icon name="calendar"></ion-icon> <input type="number" id="tempo" value="" placeholder="0"></div>
+
+                    <input type="radio" name="tempo" id="inputMes" class="radio"> <label for="">Ao mês</label>
+                    <input type="radio" name="tempo" id="inputAno" class="radio"> <label>Ao ano</label>
+                
+                </fieldset>
+                    
+            </form>
+
+            <div id="botao">
+                <button onclick="fixado()"><ion-icon name="calculator"></ion-icon></button>
+            </div>
+
+        </div>
+
+        <div id="taxaFuturaDiv"> 
+            <p>Taxa necessária para atingir <b id="valorFuturoText">R$0,00</b> em <b id="tempoNecessarioText">0</b>:</p>
+            <h3 id="taxaFuturaText">0</h3> 
+        </div>
+
+        <script src="script3.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    </body>
+
+
+</html>
