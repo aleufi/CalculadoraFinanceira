@@ -1,14 +1,27 @@
+$('input').keyup(function(event) {
 
-valorFuturoText = document.getElementById("valorFuturoText");
-boldValorFuturo = document.getElementById("tempoText");
-boldTaxaJuros = document.getElementById("taxaText");
-
+    // skip for arrow keys
+    if(event.which >= 37 && event.which <= 40) return;
+  
+    // format number
+    $(this).val(function(index, value) {
+      return value
+      .replace(/\D/g, "")
+      .replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+    });
+});
 
 function tempo(){
     
-    let valorPresente = document.getElementById("valorPresente").valueAsNumber;
-    let valorFuturo = document.getElementById("valorFuturo").valueAsNumber;
-    let taxaJuros = document.getElementById("taxaJuros").valueAsNumber;
+    valorFuturo2 = $('#valorFuturo').val();
+
+    valorPresente = $('#valorPresente').val().replaceAll(".", "").replace(",", ".");
+    valorFuturo = $('#valorFuturo').val().replaceAll(".", "").replace(",", ".");
+    taxaJuros = $('#taxaJuros').val().replaceAll(".", "").replace(",", ".");
+
+    valorPresente = parseFloat(valorPresente);
+    valorFuturo = parseFloat(valorFuturo);
+    taxaJuros = parseFloat(taxaJuros);
     
     if(valorPresente <= 0 || valorFuturo <= 0|| taxaJuros <= 0 || isNaN(valorPresente) || isNaN(valorFuturo) || isNaN(taxaJuros) ){
         alert("Preencha os campos com valores válidos");
@@ -16,27 +29,23 @@ function tempo(){
 
         let tempoNecessario = 0;
 
-        if(document.getElementById("inputMes").checked){
+        if($('#inputMes').is(':checked')){
             taxaJuros = taxaJuros / 100;
             tempoNecessario = Math.log(valorFuturo / valorPresente) / Math.log(1 + taxaJuros)
-        } else if(document.getElementById("inputAno").checked){
+        } else if($('#inputAno').is(':checked')){
             taxaJuros = taxaJuros / 100;
             tempoNecessario = Math.log(valorFuturo / valorPresente) / Math.log(1 + taxaJuros)
         }
-    
-        if(document.getElementById("inputMes").checked && tempoNecessario > 1){
-            valorFuturoText.textContent = tempoNecessario.toLocaleString("pt-BR", {minimumFractionDigits: 1, maximumFractionDigits: 1}) + " Meses";
-        } else if(document.getElementById("inputMes").checked && tempoNecessario <= 1){
-            valorFuturoText.textContent = tempoNecessario.toLocaleString("pt-BR", {minimumFractionDigits: 1, maximumFractionDigits: 1}) + " Mês";
-        } else if(document.getElementById("inputAno").checked && tempoNecessario > 1){
-            valorFuturoText.textContent = tempoNecessario.toLocaleString("pt-BR", {minimumFractionDigits: 1, maximumFractionDigits: 1}) + " Anos";
-        } else if(document.getElementById("inputAno").checked && tempoNecessario <= 1){
-            valorFuturoText.textContent = tempoNecessario.toLocaleString("pt-BR", {minimumFractionDigits: 1, maximumFractionDigits: 1}) + " Ano";
+
+        
+        if($('#inputMes').is(':checked')){
+           $('#valorFuturoText').text(tempoNecessario.toFixed(1) + " Mês(es)") ;
+        } else if($('#inputAno').is(':checked')){
+            $('#valorFuturoText').text(tempoNecessario.toFixed(1) + " Ano(s)");
         }
         
-        
-        boldValorFuturo.textContent = "R$" + valorFuturo.toLocaleString("pt-BR", {minimumFractionDigits: 2, maximumFractionDigits: 2});
-        boldTaxaJuros.textContent = taxaJuros * 100 + "%";
+        $('#tempoText').text("R$" + valorFuturo2)
+        $('#taxaText').text(taxaJuros * 100 + "%");
     }
 
 

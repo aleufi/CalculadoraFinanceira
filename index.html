@@ -8,6 +8,8 @@
         <title>Calculador Montante</title>
         
         <link rel="stylesheet" href="style.css">
+
+        <script src="code.jquery.com_jquery-3.7.1.min.js"></script>
     </head>
 
 
@@ -29,19 +31,19 @@
                 <fieldset>
 
                     <label>Aporte inicial</label> <br>
-                    <div id="textoBox"> <p>R$</p> <input type="number" id="dado1" value="" placeholder="0,00"> </div>
+                    <div id="textoBox"> <p>R$</p> <input class=format type="text" id="aporteInicial" value="" placeholder="0,00"> </div>
                     
                     <br>
                     <br>
 
                     <label>Taxa de Juros (%)</label> <br>
 
-                    <input type="radio" name="tempo2" id="meses2" class="radio">
+                    <input type="radio" name="tempo2" id="mesTaxa" class="radio">
                     <label>Ao mês</label>
-                    <input type="radio" name="tempo2" id="anos2" class="radio">
+                    <input type="radio" name="tempo2" id="anoTaxa" class="radio">
                     <label>Ao ano</label> <br>
 
-                    <div id="textoBox"> <p>%</p> <input type="number" id="dado2" value="" step=".01" placeholder="0,00"> </div>
+                    <div id="textoBox"> <p>%</p> <input type="text" id="taxaJuros" value="" step=".01" placeholder="0,00"> </div>
 
                     <br>
                     <br>
@@ -50,7 +52,7 @@
 
                 <fieldset>
                     <label>Investimento mensal</label> <br>
-                    <div id="textoBox"> <p>R$</p> <input type="number" id="dado3" placeholder="0,00"> </div>
+                    <div id="textoBox"> <p>R$</p> <input class=format type="text" id="investimentoMensal" placeholder="0,00"> </div>
 
                     <br>
                     <br>
@@ -58,14 +60,14 @@
 
                     <label>Tempo</label> <br>
 
-                    <input type="radio" name="tempo" id="meses" class="radio">
+                    <input type="radio" name="tempo" id="mesTempo" class="radio">
                     <label>Meses</label>
-                    <input type="radio" name="tempo" id="anos" class="radio">
+                    <input type="radio" name="tempo" id="anoTempo" class="radio">
                     <label>Anos</label>
 
                     <br>
 
-                    <div id="textoBox"> <p></p> <ion-icon name="calendar"></ion-icon> <input type="number" id="dado4" value="" placeholder="0"></div>
+                    <div id="textoBox"> <p></p> <ion-icon name="calendar"></ion-icon> <input class=format type="text" id="tempo" value="" placeholder="0"></div>
 
                     <br>
                     <br>
